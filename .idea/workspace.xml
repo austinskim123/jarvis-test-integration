@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bae13f6e-5fa6-4913-b736-381fd59ec568" name="Default" comment="" />
+    <list default="true" id="bae13f6e-5fa6-4913-b736-381fd59ec568" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/stepImplementations/BDDLoginTest.java" afterPath="$PROJECT_DIR$/src/stepImplementations/BDDLoginTest.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,18 +34,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BDDAddClientTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/stepImplementations/BDDAddClientTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-87">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cucumberTests/TestRunner.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,11 +46,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BDDLoginTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BDDLoginTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stepImplementations/BDDLoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1400">
-              <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="1360">
+              <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BDDAddClientTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stepImplementations/BDDAddClientTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1013">
+              <caret line="61" column="42" lean-forward="false" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,8 +94,8 @@
         <option value="$PROJECT_DIR$/src/test/LoginTestRunner.java" />
         <option value="$PROJECT_DIR$/src/cucumberTests/LoginTestRunner.java" />
         <option value="$PROJECT_DIR$/features/Login.feature" />
-        <option value="$PROJECT_DIR$/src/stepImplementations/BDDLoginTest.java" />
         <option value="$PROJECT_DIR$/features/AddClient.feature" />
+        <option value="$PROJECT_DIR$/src/stepImplementations/BDDLoginTest.java" />
       </list>
     </option>
   </component>
@@ -193,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TestRunner">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -226,6 +228,31 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="cucumberTests" />
       <option name="MAIN_CLASS_NAME" value="cucumberTests.LoginTestRunner" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cucumberTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jarvis-test-integration" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cucumberTests" />
+      <option name="MAIN_CLASS_NAME" value="cucumberTests.TestRunner" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -299,9 +326,14 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.LoginTestRunner" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestRunner" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LoginTestRunner" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestRunner" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LoginTestRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -323,21 +355,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTestRunner - 2017.12.20 at 09h 08m 06s.xml">
-      <configuration name="LoginTestRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginTestRunner - 2017.12.20 at 09h 08m 43s.xml">
-      <configuration name="LoginTestRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginTestRunner - 2017.12.20 at 09h 11m 10s.xml">
-      <configuration name="LoginTestRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginTestRunner - 2017.12.20 at 09h 14m 53s.xml">
-      <configuration name="LoginTestRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginTestRunner - 2017.12.20 at 09h 14m 55s.xml">
-      <configuration name="LoginTestRunner" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LoginTestRunner - 2017.12.20 at 09h 15m 11s.xml">
       <configuration name="LoginTestRunner" configurationId="JUnit" />
     </history-entry>
@@ -353,9 +370,24 @@
     <history-entry file="LoginTestRunner - 2017.12.20 at 09h 18m 15s.xml">
       <configuration name="LoginTestRunner" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestRunner - 2017.12.21 at 09h 38m 04s.xml">
+      <configuration name="TestRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestRunner - 2017.12.21 at 09h 38m 45s.xml">
+      <configuration name="TestRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestRunner - 2017.12.21 at 09h 40m 09s.xml">
+      <configuration name="TestRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestRunner - 2017.12.21 at 09h 40m 42s.xml">
+      <configuration name="TestRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestRunner - 2017.12.21 at 09h 41m 14s.xml">
+      <configuration name="TestRunner" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6420000" />
+    <option name="totallyTimeSpent" value="6699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2294" y="-3016" width="4832" height="2932" extended-state="6" />
@@ -712,16 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stepImplementations/BDDLoginTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features/AddClientFeature" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -766,8 +788,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stepImplementations/BDDAddClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-87">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="1013">
+          <caret line="61" column="42" lean-forward="false" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stepImplementations/BDDLoginTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
