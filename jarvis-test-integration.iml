@@ -17,13 +17,13 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="TEST" name="info.cukes:cucumber-core:1.2.5" level="project" />
-    <orderEntry type="library" scope="TEST" name="info.cukes:cucumber-java:1.2.5" level="project" />
-    <orderEntry type="library" scope="TEST" name="info.cukes:cucumber-junit:1.2.5" level="project" />
-    <orderEntry type="library" scope="TEST" name="info.cukes:cucumber-jvm-deps:1.0.5" level="project" />
     <orderEntry type="library" scope="TEST" name="info.cukes:gherkin:2.12.2" level="project" />
-    <orderEntry type="library" name="info.cukes:cucumber-junit:1.2.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="info.cukes:cucumber-jvm-deps:1.0.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="info.cukes:cucumber-junit:1.2.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="info.cukes:cucumber-java:1.2.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="info.cukes:cucumber-core:1.2.5" level="project" />
     <orderEntry type="library" name="selenium-server-standalone-3.8.1" level="project" />
     <orderEntry type="library" name="info.cukes:cucumber-java:1.2.5" level="project" />
+    <orderEntry type="library" name="info.cukes:cucumber-junit:1.2.5" level="project" />
   </component>
 </module>
