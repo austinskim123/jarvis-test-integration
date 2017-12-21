@@ -1,6 +1,5 @@
 package stepImplementations;
 
-import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -29,14 +28,10 @@ public class BDDLoginTest {
 		driver.findElement(By.cssSelector("button[class='btn btn-lg btn-primary btn-default'][type='submit']")).click();
 	}
 
-	@Then("user gets confirmation")
+	@Then("^user gets confirmation$")
 	public void user_gets_confirmation() {
 		System.out.println("User successfully logged in!");
 		Assert.assertTrue(driver.findElement(By.className("header-page-title")).getText().equals("j.a.r.v.i.s"));
-	}
-
-	@After
-	public void tearDown() {
 		driver.quit();
 	}
 
