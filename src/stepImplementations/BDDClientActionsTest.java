@@ -1,10 +1,10 @@
 package stepImplementations;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.DirectoriesPageFactory;
@@ -12,9 +12,10 @@ import pages.LoginPageFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class BDDAddClientTest {
+public class BDDClientActionsTest {
 
 	private WebDriver driver;
+	DirectoriesPageFactory directoriesPageFactory;
 
 	@Given("^user is logged in and on the directories page$")
 	public void user_is_logged_in_and_on_the_directories_page() {
@@ -25,20 +26,23 @@ public class BDDAddClientTest {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("jarvis.com:8080/directories");
+		directoriesPageFactory = new DirectoriesPageFactory(driver);
 
 		// Login action
 		LoginPageFactory loginPageFactory = new LoginPageFactory(driver);
 		loginPageFactory.login("test", "test");
 	}
 
-	@When("^user clicks on Add Client and fills out the required fields$")
-	public void user_clicks_on_add_client_and_fills_out_the_required_fields() {
-
-		DirectoriesPageFactory directoriesPageFactory = new DirectoriesPageFactory(driver);
+	@When("^user clicks on Add Client$")
+	public void user_clicks_on_add_client() {
 
 		// Click on the add button
 		System.out.println("User is logged in and on the Directories page...");
 		directoriesPageFactory.openAddClientForm();
+	}
+
+	@And("^user submits form with the required fields filled out$")
+	public void user_submits_form_with_the_required_fields_filled_out() {
 
 		// Change windows and fill out the form and click submit
 		directoriesPageFactory.createTestClient("Test Client");
@@ -47,10 +51,8 @@ public class BDDAddClientTest {
 		directoriesPageFactory.exitClientForm();
 	}
 
-	@Then("^user gets confirmation that the client was added successfully$")
+	@And("^user gets confirmation that the client was added successfully$")
 	public void user_gets_confirmation_that_the_client_was_added_successfully() {
-
-		DirectoriesPageFactory directoriesPageFactory = new DirectoriesPageFactory(driver);
 
 		System.out.println("User successfully added client!");
 
@@ -58,10 +60,21 @@ public class BDDAddClientTest {
 		directoriesPageFactory.refresh();
 		String testClient = directoriesPageFactory.getFirstRowClientName();
 		Assert.assertTrue(testClient.equals("Test Client"));
+	}
+
+	@And("^user deletes most recently added client$")
+	public void user_deletes_most_recently_added_client() {
 
 		// Delete Test Client to restore DB as it was
 		directoriesPageFactory.deleteTestClient();
 		directoriesPageFactory.refresh();
+	}
+
+	@Then("^user gets confirmation that the client was deleted successfully$")
+	public void user_gets_confirmation_that_the_client_was_deleted_successfully() {
+
+		System.out.println("User successfully deleted client!");
+
 		String notTestClient = directoriesPageFactory.getFirstRowClientName();
 		Assert.assertTrue(!notTestClient.equals("Test Client"));
 
