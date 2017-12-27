@@ -48,7 +48,8 @@ public class LoginPageFactory {
 
 	public void login(String username, String password) {
 
-		setUsername(username);
+		usernameBox.clear();
+		setUsername(username+"@liferay.com");
 		setPassword(password);
 		clickLogin();
 	}
