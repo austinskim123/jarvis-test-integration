@@ -12,10 +12,10 @@ import pages.LoginPageFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class BDDClientActionsTest {
+public class BDDAddDeleteClientTest {
 
 	private WebDriver driver;
-	DirectoriesPageFactory directoriesPageFactory;
+	private DirectoriesPageFactory directoriesPageFactory;
 
 	@Given("^user is logged in and on the directories page$")
 	public void user_is_logged_in_and_on_the_directories_page() {
