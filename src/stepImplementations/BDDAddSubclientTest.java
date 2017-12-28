@@ -7,23 +7,20 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import pages.ClientPageFactory;
 import pages.DirectoriesPageFactory;
 import pages.LoginPageFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class BDDEditClientTest {
+public class BDDAddSubclientTest {
 
 	private WebDriver driver;
-
 	private DirectoriesPageFactory directoriesPageFactory;
-
 	private ClientPageFactory clientPageFactory;
 
-	@Given("^user is logged in and client has been added$")
-	public void user_is_logged_in_and_client_has_been_added() {
+	@Given("^user is logged into client page of Test Client$")
+	public void user_is_logged_into_client_page_of_test_client() {
 
 		// Open web driver and go to login page
 		System.out.println("User is logged in and on the Directories page...");
@@ -51,48 +48,45 @@ public class BDDEditClientTest {
 
 		// Refresh the page
 		directoriesPageFactory.refresh();
-	}
-
-	@When("^user navigates to the client page$")
-	public void user_navigates_to_the_client_page() {
 
 		System.out.println("User added client...");
 		directoriesPageFactory.clickFirstRowClient();
 	}
 
-	@And("^user clicks on Edit Client$")
-	public void user_clicks_on_edit_client() {
+	@When("^user clicks on Add Subclient$")
+	public void user_clicks_on_add_subclient() {
 
-		clientPageFactory.clickEditClientButton();
+		clientPageFactory.openSubclientForm();
 	}
 
-	@And("^user edits information for the client$")
-	public void user_edits_information_for_the_client() {
+	@And("^user submits subclient form with required fields filled out$")
+	public void user_submits_subclient_form_with_required_fields_filled_out() {
 
-		clientPageFactory.editClientName("Edited Test Client");
+		clientPageFactory.setSubclientName("Test Subclient");
 		clientPageFactory.exitClientForm();
 	}
 
-	@Then("^user gets confirmation that the client was edited successfully$")
-	public void user_gets_confirmation_that_the_client_was_edited_successfully() {
+	@Then("^user gets confirmation that the subclient was added successfully$")
+	public void user_gets_confirmation_that_the_subclient_was_added_successfully() {
 
-		System.out.println("User successfully edited client!");
+		System.out.println("User successfully added subclient!");
 
 		clientPageFactory.clickDirectoriesButton();
 		directoriesPageFactory.refresh();
 
 		String clientName = directoriesPageFactory.getFirstRowClientName();
-		Assert.assertTrue(clientName.equals("Edited Test Client"));
+		Assert.assertTrue(clientName.equals("Test Subclient"));
 
-		// Delete Test Client to restore DB as it was
 		directoriesPageFactory.deleteFirstRowClient();
 		directoriesPageFactory.refresh();
+		clientName = directoriesPageFactory.getFirstRowClientName();
+		Assert.assertTrue(clientName.equals("Test Client"));
 
-		String notTestClient = directoriesPageFactory.getFirstRowClientName();
-		Assert.assertTrue(!notTestClient.equals("Edited Test Client"));
+		directoriesPageFactory.deleteFirstRowClient();
+		directoriesPageFactory.refresh();
+		clientName = directoriesPageFactory.getFirstRowClientName();
+		Assert.assertTrue(!(clientName.equals("Test Client") || clientName.equals("Test Subclient")));
 
-		// Close browser
 		driver.quit();
 	}
-
 }

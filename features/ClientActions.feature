@@ -14,3 +14,9 @@ When user navigates to the client page
 And user clicks on Edit Client
 And user edits information for the client
 Then user gets confirmation that the client was edited successfully
+
+Scenario: the user should be able to add a subclient from the client page
+Given user is logged into client page of Test Client
+When user clicks on Add Subclient
+And user submits subclient form with required fields filled out
+Then user gets confirmation that the subclient was added successfully

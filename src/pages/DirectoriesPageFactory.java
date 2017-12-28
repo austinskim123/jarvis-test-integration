@@ -31,9 +31,6 @@ public class DirectoriesPageFactory {
 	@FindBy(css = "td[class='table-cell first']")
 	private WebElement firstRowClient;
 
-//	@FindBy(linkText = "Test Client")
-//	private WebElement testClient;
-
 	@FindBy(css = "a[class='dropdown-toggle direction-left max-display-items-15 btn btn-default'][title='Actions']")
 	private WebElement actionButton;
 
@@ -110,7 +107,7 @@ public class DirectoriesPageFactory {
 		exitClientFormButton.click();
 	}
 
-	public void deleteTestClient() {
+	public void deleteFirstRowClient() {
 
 		actionButton.click();
 		deleteButton.click();
