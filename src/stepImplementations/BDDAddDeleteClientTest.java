@@ -66,7 +66,7 @@ public class BDDAddDeleteClientTest {
 	public void user_deletes_most_recently_added_client() {
 
 		// Delete Test Client to restore DB as it was
-		directoriesPageFactory.deleteTestClient();
+		directoriesPageFactory.deleteFirstRowClient();
 		directoriesPageFactory.refresh();
 	}
 

@@ -25,6 +25,12 @@ public class ClientPageFactory {
 	@FindBy(css = "button[type='submit']")
 	private WebElement submitButton;
 
+	@FindBy(css = "button[class='btn btn-primary'][type='button']")
+	private WebElement plusButton;
+
+	@FindBy(linkText = "Add Subclient")
+	private WebElement addSubclientButton;
+
 	@FindBy(linkText = "Directories")
 	private WebElement directoriesButton;
 
@@ -59,18 +65,37 @@ public class ClientPageFactory {
 		directoriesButton.click();
 	}
 
+	public void clickPlusButton() {
+
+		plusButton.click();
+	}
+
+	public void clickAddSubclientButton() {
+
+		addSubclientButton.click();
+	}
+
 	public void switchIFrameToClientForm() {
 
 		driver.switchTo().frame(iframe);
 	}
 
-/*	public void refresh() {
-
-		driver.navigate().refresh();
-		driver.navigate().refresh();
-	}*/
-
 	// Actions
+
+	public void openSubclientForm() {
+
+		clickPlusButton();
+		clickAddSubclientButton();
+	}
+
+	public void setSubclientName(String name) {
+
+		switchIFrameToClientForm();
+		clickClientNameBox();
+		setClientNameBox(name);
+		clickSubmitButton();
+	}
+
 	public void editClientName(String name) {
 
 		switchIFrameToClientForm();
