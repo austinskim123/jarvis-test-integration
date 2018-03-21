@@ -16,7 +16,7 @@ public class BDDLoginTest {
 	@Given("^user is on the login page$")
 	public void user_is_on_the_login_page() {
 		System.out.println("User is on the login page...");
-		System.setProperty("webdriver.chrome.driver", "C:\\liferay\\external-libraries\\browser-drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/external-libraries/browser-drivers/chromedriver");
 		driver = new ChromeDriver();
 		driver.get("jarvis.com:8080");
 	}

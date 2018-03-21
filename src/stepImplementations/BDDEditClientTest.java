@@ -7,7 +7,6 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import pages.ClientPageFactory;
 import pages.DirectoriesPageFactory;
 import pages.LoginPageFactory;
@@ -27,7 +26,7 @@ public class BDDEditClientTest {
 
 		// Open web driver and go to login page
 		System.out.println("User is logged in and on the Directories page...");
-		System.setProperty("webdriver.chrome.driver", "C:\\liferay\\external-libraries\\browser-drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/external-libraries/browser-drivers/chromedriver");
 		driver = new ChromeDriver();
 //		System.setProperty("webdriver.gecko.driver", "C:\\liferay\\external-libraries\\browser-drivers\\geckodriver.exe");
 //		driver = new FirefoxDriver();
