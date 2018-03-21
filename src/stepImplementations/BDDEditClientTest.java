@@ -26,7 +26,7 @@ public class BDDEditClientTest {
 
 		// Open web driver and go to login page
 		System.out.println("User is logged in and on the Directories page...");
-		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/external-libraries/browser-drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/jarvis-test-integration/external-libraries/browser-drivers/chromedriver");
 		driver = new ChromeDriver();
 //		System.setProperty("webdriver.gecko.driver", "C:\\liferay\\external-libraries\\browser-drivers\\geckodriver.exe");
 //		driver = new FirefoxDriver();

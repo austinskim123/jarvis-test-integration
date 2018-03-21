@@ -22,7 +22,7 @@ public class BDDAddDeleteClientTest {
 
 		// Open web driver and go to login page
 		System.out.println("User is on the login page...");
-		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/external-libraries/browser-drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/jarvis-test-integration/external-libraries/browser-drivers/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("jarvis.com:8080/directories");
