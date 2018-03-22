@@ -16,7 +16,7 @@ public class BDDLoginTest {
 	public void user_is_on_the_login_page() {
 		System.out.println("User is on the login page...");
 		driver = util.DriverFactory.open(PropValues.WEB_BROWSER);
-		driver.get("jarvis.com:8080");
+		driver.get(PropValues.BASE_URL);
 	}
 
 	@When("^user enters correct username and correct password$")
