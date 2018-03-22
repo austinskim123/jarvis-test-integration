@@ -6,10 +6,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.ClientPageFactory;
 import pages.DirectoriesPageFactory;
 import pages.LoginPageFactory;
+import util.PropValues;
 
 import java.util.concurrent.TimeUnit;
 
@@ -26,10 +26,7 @@ public class BDDEditClientTest {
 
 		// Open web driver and go to login page
 		System.out.println("User is logged in and on the Directories page...");
-		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/jarvis-test-integration/external-libraries/browser-drivers/chromedriver");
-		driver = new ChromeDriver();
-//		System.setProperty("webdriver.gecko.driver", "C:\\liferay\\external-libraries\\browser-drivers\\geckodriver.exe");
-//		driver = new FirefoxDriver();
+		driver = util.DriverFactory.open(PropValues.WEB_BROWSER);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://jarvis.com:8080/directories");
 		directoriesPageFactory = new DirectoriesPageFactory(driver);
