@@ -24,7 +24,7 @@ public class BDDAddDeleteClientTest {
 		System.out.println("User is on the login page...");
 		driver = util.DriverFactory.open(PropValues.WEB_BROWSER);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("jarvis.com:8080/directories");
+		driver.get(PropValues.BASE_URL + "/directories");
 		directoriesPageFactory = new DirectoriesPageFactory(driver);
 
 		// Login action

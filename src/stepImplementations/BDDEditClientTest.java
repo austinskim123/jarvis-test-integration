@@ -28,7 +28,7 @@ public class BDDEditClientTest {
 		System.out.println("User is logged in and on the Directories page...");
 		driver = util.DriverFactory.open(PropValues.WEB_BROWSER);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("http://jarvis.com:8080/directories");
+		driver.get(PropValues.BASE_URL + "/directories");
 		directoriesPageFactory = new DirectoriesPageFactory(driver);
 		clientPageFactory = new ClientPageFactory(driver);
 
