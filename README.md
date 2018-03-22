@@ -7,6 +7,11 @@ The setup instructions assume that you have a copy of lfrgs-liferay-jarvis on yo
 For the tests that are already created, it is assumed that the context menu is properly configured on each page. If the
 context menu does not have the element the test is looking for then the test will fail. 
 
+Also, it may be necessary to change the site url the tests are run on. By default our test are set to use the site jarvis.com. 
+We added 'jarvis.com' to our hosts file and set 'jarvis.com' as the private url for the site. 
+If you do not want to use jarvis.com as the url, you can update what URL is used by changing what `BASE_URL` is set to
+in `PropValues.java`  
+
 #### Required Libraries:
 In order to get the test to run properly you have to first import the necessary libraries in to your project. 
 These libraries are included in the repositories 'external-libraries' directory. 
