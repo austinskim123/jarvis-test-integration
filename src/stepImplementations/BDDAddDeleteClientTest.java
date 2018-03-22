@@ -6,9 +6,9 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.DirectoriesPageFactory;
 import pages.LoginPageFactory;
+import util.PropValues;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,8 +22,7 @@ public class BDDAddDeleteClientTest {
 
 		// Open web driver and go to login page
 		System.out.println("User is on the login page...");
-		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/jarvis-test-integration/external-libraries/browser-drivers/chromedriver");
-		driver = new ChromeDriver();
+		driver = util.DriverFactory.open(PropValues.WEB_BROWSER);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("jarvis.com:8080/directories");
 		directoriesPageFactory = new DirectoriesPageFactory(driver);

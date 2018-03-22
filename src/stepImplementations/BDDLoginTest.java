@@ -4,10 +4,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.LoginPageFactory;
+import util.PropValues;
 
 public class BDDLoginTest {
 
@@ -16,8 +15,7 @@ public class BDDLoginTest {
 	@Given("^user is on the login page$")
 	public void user_is_on_the_login_page() {
 		System.out.println("User is on the login page...");
-		System.setProperty("webdriver.chrome.driver", "/home/austinskim/liferay/jarvis-test-integration/external-libraries/browser-drivers/chromedriver");
-		driver = new ChromeDriver();
+		driver = util.DriverFactory.open(PropValues.WEB_BROWSER);
 		driver.get("jarvis.com:8080");
 	}
 
