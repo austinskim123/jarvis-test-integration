@@ -1,18 +1,33 @@
 # jarvis-test-integration
 This project contains automated tests implemented with Selenium and Cucumber for Liferay Global Service's internal portal - Jarvis.
 
-## Setup
 ### Prerequisites
 The setup instructions assume that you have a copy of lfrgs-liferay-jarvis on your local machine already, as it is an automated testing framework for that project.
 
-### Installing
-Depending on your OS (Windows, Mac, Linux) and the browser you want to test for, you need to download the appropriate web driver. 
+For the tests that are already created, it is assumed that the context menu is properly configured on each page. If the
+context menu does not have the element the test is looking for then the test will fail. 
 
-Navigate to the following link:
-```
-https://www.seleniumhq.org/download/
-```
+#### Required Libraries:
+In order to get the test to run properly you have to first import the necessary libraries in to your project. 
+These libraries are included in the repositories 'external-libraries' directory. 
 
-Under the section labeled **Third Party Browser Drivers NOT DEVELOPED by seleniumhq**, find the browser you want to run the automated tests for. Place the web driver you downloaded into the /external-libraries/browser-drivers/ directory.
+* cucumber-core-1.2.5.jar
+* cucumber-java-1.2.5.jar
+* cucumber-junit-1.2.5.jar
+* cucumber-jvm-deps-1.0.5.jar
+* gherkin-2.12.2.jar
+* hamcrest-core-1.3.jar
+* junit-4.12.jar
+* selenium-server-standalone-3.11.0.jar
 
-Do a global search in your IDE for `/external-libraries/browser-driver` and replace the path with the path to your web driver. Note that you will also have to change the class of the WebDriver based on which web driver you use (i.e. ChromeDriver for Google Chrome, FirefoxDriver for Mozilla Firefox, etc.).
+### How to Run Tests
+To run the tests, run the `TestRunner.java` class
+
+### Making Your Own Test
+1. Create a feature file and add a scenario in the same directory as the other feature files. If you want to add a scenario to an already existing feature, then feel
+free to do that.
+2. Create and implement a test class in the `stepImplementations` package. One test class should address one scenario.
+3. Notice that there are `*PageFactory.java` files. These are files that allow you to easily access elements for a given page. If a `*PageFactory.java` class is missing the 
+element you need, feel free to add it to an existing class. If a page on Jarvis does not have an associated `*PageFactory.java` class, feel free to create it.
+
+NOTE: If you want to change the browser you are testing in, you can configure it in `PropValues.java`. `PropKeys.java` has the available options.
